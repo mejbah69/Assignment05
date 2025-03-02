@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 min-h-screen font-sans">
+    <div class="container mx-auto p-6">
+        <header class="flex items-center justify-between bg-white p-4 rounded-lg shadow-md">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-500 text-white font-bold text-xl rounded"><img src="assets/logo.png" alt=""></div>
+                <h1 class="text-gray-800">Dev<span class="text-xl font-bold">Board</span></h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center bg-blue-100 text-blue-600 font-bold px-3 py-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span id="completed-count">23</span>
+                </div>
+                <div id="color-wheel" class="w-8 h-8 cursor-pointer"><img src="assets/theme-btn.png" alt=""></div>
+            </div>
+        </header>
+        <div class="grid grid-cols-12 gap-6 mt-6">
+            <div class="col-span-9">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-gray-500">Task Assigned</p>
+                            <p id="task-assigned" class="text-2xl font-bold text-gray-800">6</p>
+                        </div>
+                    </div>
+                    <a href="Blogs.html">
+                        <div class="bg-blue-500 p-4 rounded-lg shadow-md text-white flex items-center">
+                            <div class=" text-blue-500 p-3 ">
+                                <img src="assets/board.png" alt="">
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-lg font-bold">Discover Something New Today!</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <img src="assets/calender.png" alt="">
+                        </div>
+                        <div class="ml-4">
+                            <p id="current-date" class="text-lg font-bold text-gray-800">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mt-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-sm text-gray-500">ShopEase</p>
+                        <h3 class="text-lg font-bold text-gray-800">Fix Mobile Button Issue</h3>
+                        <p class="text-sm text-gray-500 mt-2">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="justify-between mt-4">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-sm font-bold text-gray-800">21 March 2025</p>
+                            </div>
+                            <div class="mt-2">
+                                <button
+                                    class="bg-blue-500 text-white text-sm px-3 py-1 rounded-l completed-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-sm text-gray-500">CloudSync</p>
+                        <h3 class="text-lg font-bold text-gray-800">Add Dark Mode</h3>
+                        <p class="text-sm text-gray-500 mt-2">Store the user's preference in localStorage to use more
+                            efficiently</p>
+                        <div class="flex items-center justify-between">
+                            <div class="justify-between mt-4">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-sm font-bold text-gray-800">21 March 2025</p>
+                            </div>
+                            <div class="mt-2">
+                                <button
+                                    class="bg-blue-500 text-white text-sm px-3 py-1 rounded-l completed-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-sm text-gray-500">SwiftPay</p>
+                        <h3 class="text-lg font-bold text-gray-800">Optimize Home Page</h3>
+                        <p class="text-sm text-gray-500 mt-2">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="justify-between mt-4">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-sm font-bold text-gray-800">21 March 2025</p>
+                            </div>
+                            <div class="mt-2">
+                                <button
+                                    class="bg-blue-500 text-white text-sm px-3 py-1 rounded-l completed-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-sm text-gray-500">Meta</p>
+                        <h3 class="text-lg font-bold text-gray-800">Add New Emoji 🙌</h3>
+                        <p class="text-sm text-gray-500 mt-2">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="justify-between mt-4">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-sm font-bold text-gray-800">21 March 2025</p>
+                            </div>
+                            <div class="mt-2">
+                                <button
+                                    class="bg-blue-500 text-white text-sm px-3 py-1 rounded-l completed-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-sm text-gray-500">Google LLC</p>
+                        <h3 class="text-lg font-bold text-gray-800">Integrate OpenAI API</h3>
+                        <p class="text-sm text-gray-500 mt-2">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="justify-between mt-4">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-sm font-bold text-gray-800">21 March 2025</p>
+                            </div>
+                            <div class="mt-2">
+                                <button
+                                    class="bg-blue-500 text-white text-sm px-3 py-1 rounded-l completed-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-sm text-gray-500">Glassdoor</p>
+                        <h3 class="text-lg font-bold text-gray-800">Improve Job Searching</h3>
+                        <p class="text-sm text-gray-500 mt-2">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="justify-between mt-4">
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-sm font-bold text-gray-800">21 March 2025</p>
+                            </div>
+                            <div class="mt-2">
+                                <button
+                                    class="bg-blue-500 text-white text-sm px-3 py-1 rounded-l completed-btn">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3">
+                <div class="bg-white p-4 rounded-lg shadow-md h-full text-center">
+                    <div class="flex flex-row justify-center">
+                        <img class="w-6 h2" src="assets/activity.png" alt="">
+                        <h3 class="text-lg font-bold text-gray-800 ml-2">Activity Log</h3>
+                    </div>
+                    <button id="clear-history" class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full mt-4">Clear
+                        History</button>
+                    <div id="activity-log" class="mt-4 space-y-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const taskAssignedElement = document.getElementById('task-assigned');
+        const completedCountElement = document.getElementById('completed-count');
+        const activityLog = document.getElementById('activity-log');
+        const clearHistoryButton = document.getElementById('clear-history');
+        const colorWheel = document.getElementById('color-wheel');
+        const currentDateElement = document.getElementById('current-date');
+        const updateDate = () => {
+            const date = new Date();
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            currentDateElement.textContent = date.toLocaleDateString('en-US', options);
+        };
+        updateDate();
+        const completedButtons = document.querySelectorAll('.completed-btn');
+        completedButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (confirm('Board updated successfully')) {
+                    let taskAssignedCount = parseInt(taskAssignedElement.textContent);
+                    let completedCount = parseInt(completedCountElement.textContent);
+                    if (taskAssignedCount > 0) {
+                        taskAssignedElement.textContent = taskAssignedCount - 1;
+                        completedCountElement.textContent = completedCount + 1;
+                        const taskTitle = button.closest('.bg-white').querySelector('h3').textContent;
+                        const time = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                        const logEntry = document.createElement('p');
+                        logEntry.className = 'text-sm text-gray-500';
+                        logEntry.textContent = `Completed "${taskTitle}" at ${time}`;
+                        activityLog.appendChild(logEntry);
+                        button.disabled = true;
+                        button.classList.add('opacity-50', 'cursor-not-allowed');
+                        if (taskAssignedCount - 1 === 0) {
+                            alert('Congrats!!! You have completed all current tasks');
+                        }
+                    }
+                }
+            });
+        });
+        clearHistoryButton.addEventListener('click', () => {
+            activityLog.innerHTML = '';
+        });
+        colorWheel.addEventListener('click', () => {
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
